@@ -1,0 +1,40 @@
+{
+  "Meta": {
+    "title": "{name} | Online bestellen",
+    "description": "Entdecken Sie das Angebot von {name} und bestellen Sie Essen zur Lieferung."
+  },
+  "Header": {
+    "orderOnline": "online bestellen"
+  },
+  "CategoryNavigation": {
+    "label": "Speisekategorien",
+    "loading": "Kategorien werden geladen…",
+    "error": "Kategorien sind derzeit nicht verfügbar."
+  },
+  "Products": {
+    "loading": "Speisekarte wird geladen…",
+    "error": "Die Speisekarte ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.",
+    "noCategories": "Kategorien sind derzeit nicht verfügbar.",
+    "empty": "In dieser Kategorie gibt es derzeit keine Produkte.",
+    "sale": "Angebot",
+    "unavailable": "Derzeit nicht verfügbar"
+  },
+  "Cart": {
+    "label": "Warenkorb",
+    "comingSoon": "Warenkorb demnächst"
+  },
+  "LocaleSwitcher": {
+    "label": "Sprache wählen",
+    "locale": {
+      "sr": "Srpski",
+      "hu": "Magyar",
+      "de": "Deutsch",
+      "ru": "Русский",
+      "en": "English"
+    }
+  },
+  "Home": {
+    "heading": "Onlinebestellungen bald verfügbar",
+    "intro": "Wir bereiten unsere neue Bestellplattform vor. Speisekarte und Lieferung sind verfügbar, sobald das Restaurant sein Angebot veröffentlicht hat."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "Meta": {
+    "title": "{name} | Online poručivanje",
+    "description": "Pregledajte ponudu restorana {name} i poručite hranu za dostavu."
+  },
+  "Header": {
+    "orderOnline": "poruči online"
+  },
+  "CategoryNavigation": {
+    "label": "Kategorije jela",
+    "loading": "Učitavanje kategorija…",
+    "error": "Kategorije trenutno nisu dostupne."
+  },
+  "Products": {
+    "loading": "Učitavanje ponude…",
+    "error": "Ponuda trenutno nije dostupna. Pokušajte ponovo kasnije.",
+    "noCategories": "Kategorije trenutno nisu dostupne.",
+    "empty": "U ovoj kategoriji trenutno nema proizvoda.",
+    "sale": "Akcija",
+    "unavailable": "Trenutno nije dostupno"
+  },
+  "Cart": {
+    "label": "Korpa",
+    "comingSoon": "Korpa uskoro"
+  },
+  "LocaleSwitcher": {
+    "label": "Izbor jezika",
+    "locale": {
+      "sr": "Srpski",
+      "hu": "Magyar",
+      "de": "Deutsch",
+      "ru": "Русский",
+      "en": "English"
+    }
+  },
+  "Home": {
+    "heading": "Online poručivanje uskoro",
+    "intro": "Pripremamo novu platformu za poručivanje. Meni i dostava biće dostupni nakon objavljivanja ponude restorana."
+  }
+}

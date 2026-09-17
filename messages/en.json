@@ -1,0 +1,40 @@
+{
+  "Meta": {
+    "title": "{name} | Order food online",
+    "description": "Explore the menu at {name} and order food for delivery."
+  },
+  "Header": {
+    "orderOnline": "order online"
+  },
+  "CategoryNavigation": {
+    "label": "Food categories",
+    "loading": "Loading categories…",
+    "error": "Categories are temporarily unavailable."
+  },
+  "Products": {
+    "loading": "Loading the menu…",
+    "error": "The menu is temporarily unavailable. Please try again later.",
+    "noCategories": "Categories are currently unavailable.",
+    "empty": "There are no products in this category right now.",
+    "sale": "Sale",
+    "unavailable": "Currently unavailable"
+  },
+  "Cart": {
+    "label": "Cart",
+    "comingSoon": "Cart coming soon"
+  },
+  "LocaleSwitcher": {
+    "label": "Choose language",
+    "locale": {
+      "sr": "Srpski",
+      "hu": "Magyar",
+      "de": "Deutsch",
+      "ru": "Русский",
+      "en": "English"
+    }
+  },
+  "Home": {
+    "heading": "Online ordering is coming soon",
+    "intro": "We are preparing a new ordering platform. The menu and delivery will be available once the restaurant publishes its offerings."
+  }
+}

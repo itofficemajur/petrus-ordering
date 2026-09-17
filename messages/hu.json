@@ -1,0 +1,40 @@
+{
+  "Meta": {
+    "title": "{name} | Online rendelés",
+    "description": "Fedezze fel a(z) {name} étterem kínálatát, és rendeljen ételt házhozszállítással."
+  },
+  "Header": {
+    "orderOnline": "rendelj online"
+  },
+  "CategoryNavigation": {
+    "label": "Ételkategóriák",
+    "loading": "Kategóriák betöltése…",
+    "error": "A kategóriák jelenleg nem érhetők el."
+  },
+  "Products": {
+    "loading": "Az étlap betöltése…",
+    "error": "Az étlap átmenetileg nem érhető el. Kérjük, próbálja újra később.",
+    "noCategories": "A kategóriák jelenleg nem érhetők el.",
+    "empty": "Ebben a kategóriában jelenleg nincsenek termékek.",
+    "sale": "Akció",
+    "unavailable": "Jelenleg nem elérhető"
+  },
+  "Cart": {
+    "label": "Kosár",
+    "comingSoon": "Kosár hamarosan"
+  },
+  "LocaleSwitcher": {
+    "label": "Nyelv kiválasztása",
+    "locale": {
+      "sr": "Srpski",
+      "hu": "Magyar",
+      "de": "Deutsch",
+      "ru": "Русский",
+      "en": "English"
+    }
+  },
+  "Home": {
+    "heading": "Az online rendelés hamarosan elérhető",
+    "intro": "Új rendelési felületünk készül. Az étlap és a kiszállítás az étterem kínálatának közzététele után lesz elérhető."
+  }
+}
