@@ -36,5 +36,24 @@
   "Home": {
     "heading": "Online poručivanje uskoro",
     "intro": "Pripremamo novu platformu za poručivanje. Meni i dostava biće dostupni nakon objavljivanja ponude restorana."
+  },
+  "Footer": {
+    "description": "Dobra hrana počinje dobrim izborom. Pronađite svoje omiljeno jelo i uživajte u svakom zalogaju.",
+    "newsletterTitle": "Novosti iz naše kuhinje",
+    "newsletterDescription": "Prvi saznajte kada stignu nova jela i posebne ponude.",
+    "emailLabel": "Email adresa",
+    "emailPlaceholder": "Vaša email adresa",
+    "subscribeSoon": "Prijava uskoro dostupna",
+    "consent": "Prijavljujem se da me obaveštavate o novim jelima.",
+    "footerNavigation": "Informacije i pravni dokumenti",
+    "information": "Informacije",
+    "contact": "Kontaktiraj nas",
+    "privacy": "Politika privatnosti",
+    "cookies": "Politika kolačića",
+    "terms": "Uslovi i odredbe",
+    "instagramSoon": "Instagram profil uskoro dostupan",
+    "rights": "Sva prava zadržana.",
+    "backHome": "Nazad na početnu",
+    "placeholderPage": "Ova stranica je trenutno prikaz za izgled sajta. Sadržaj će biti dodat pre objavljivanja."
   }
 }

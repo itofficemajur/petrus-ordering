@@ -36,5 +36,24 @@
   "Home": {
     "heading": "Az online rendelés hamarosan elérhető",
     "intro": "Új rendelési felületünk készül. Az étlap és a kiszállítás az étterem kínálatának közzététele után lesz elérhető."
+  },
+  "Footer": {
+    "description": "A jó étel jó választással kezdődik. Találja meg kedvenc fogását, és élvezzen minden falatot.",
+    "newsletterTitle": "Hírek a konyhánkból",
+    "newsletterDescription": "Értesüljön elsőként az új ételekről és különleges ajánlatokról.",
+    "emailLabel": "E-mail-cím",
+    "emailPlaceholder": "Az Ön e-mail-címe",
+    "subscribeSoon": "Feliratkozás hamarosan",
+    "consent": "Feliratkozom, hogy értesítést kapjak az új ételekről.",
+    "footerNavigation": "Információk és jogi oldalak",
+    "information": "Információk",
+    "contact": "Kapcsolat",
+    "privacy": "Adatvédelmi szabályzat",
+    "cookies": "Süti szabályzat",
+    "terms": "Általános szerződési feltételek",
+    "instagramSoon": "Instagram-profil hamarosan",
+    "rights": "Minden jog fenntartva.",
+    "backHome": "Vissza a kezdőlapra",
+    "placeholderPage": "Ez az oldal jelenleg látványterv. A tartalom a megjelenés előtt kerül ide."
   }
 }

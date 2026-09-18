@@ -36,5 +36,24 @@
   "Home": {
     "heading": "Onlinebestellungen bald verfügbar",
     "intro": "Wir bereiten unsere neue Bestellplattform vor. Speisekarte und Lieferung sind verfügbar, sobald das Restaurant sein Angebot veröffentlicht hat."
+  },
+  "Footer": {
+    "description": "Gutes Essen beginnt mit einer guten Wahl. Entdecken Sie Ihr Lieblingsgericht und genießen Sie jeden Bissen.",
+    "newsletterTitle": "Neues aus unserer Küche",
+    "newsletterDescription": "Erfahren Sie zuerst von neuen Gerichten und besonderen Angeboten.",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "Ihre E-Mail-Adresse",
+    "subscribeSoon": "Anmeldung bald verfügbar",
+    "consent": "Ich melde mich an, um über neue Gerichte informiert zu werden.",
+    "footerNavigation": "Informationen und rechtliche Seiten",
+    "information": "Informationen",
+    "contact": "Kontaktieren Sie uns",
+    "privacy": "Datenschutzerklärung",
+    "cookies": "Cookie-Richtlinie",
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "instagramSoon": "Instagram-Profil bald verfügbar",
+    "rights": "Alle Rechte vorbehalten.",
+    "backHome": "Zurück zur Startseite",
+    "placeholderPage": "Diese Seite dient derzeit als Designvorschau. Inhalte werden vor der Veröffentlichung ergänzt."
   }
 }

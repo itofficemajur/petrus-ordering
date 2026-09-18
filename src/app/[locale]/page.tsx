@@ -37,18 +37,6 @@ export default async function HomePage() {
         </header>
         <CategoryNavigation />
         <ProductGrid />
-        <footer className="flex flex-wrap items-center justify-between gap-4 border-t border-stone-300 py-5 text-sm text-stone-600">
-          <Image
-            src="/Petrus-logo-yellow.png"
-            alt={siteConfig.restaurant.name}
-            width={112}
-            height={50}
-            className="h-auto w-28"
-          />
-          <span>
-            © {new Date().getFullYear()} {siteConfig.restaurant.name}
-          </span>
-        </footer>
       </StorefrontProvider>
     </main>
   );

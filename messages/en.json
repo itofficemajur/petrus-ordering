@@ -36,5 +36,24 @@
   "Home": {
     "heading": "Online ordering is coming soon",
     "intro": "We are preparing a new ordering platform. The menu and delivery will be available once the restaurant publishes its offerings."
+  },
+  "Footer": {
+    "description": "Good food starts with a good choice. Find your favourite dish and enjoy every bite.",
+    "newsletterTitle": "News from our kitchen",
+    "newsletterDescription": "Be the first to hear about new dishes and special offers.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "Your email address",
+    "subscribeSoon": "Sign-up coming soon",
+    "consent": "I sign up to receive updates about new dishes.",
+    "footerNavigation": "Information and legal pages",
+    "information": "Information",
+    "contact": "Contact us",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "terms": "Terms and conditions",
+    "instagramSoon": "Instagram profile coming soon",
+    "rights": "All rights reserved.",
+    "backHome": "Back to home",
+    "placeholderPage": "This page is currently a design preview. Content will be added before launch."
   }
 }
