@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { NewsletterForm } from "@/components/newsletter-form";
 import { getTranslations } from "next-intl/server";
 
 import { siteConfig } from "@/config/site";
@@ -55,24 +55,7 @@ export async function SiteFooter() {
             <p className="mt-3 max-w-xs text-sm leading-6 text-stone-300">
               {t("newsletterDescription")}
             </p>
-            <div className="mt-6 flex max-w-sm rounded-xl border border-white/25 bg-white/10 p-1 focus-within:border-[#e7c37c]">
-              <input
-                type="email"
-                disabled
-                aria-label={t("emailLabel")}
-                placeholder={t("emailPlaceholder")}
-                className="min-w-0 flex-1 px-3 py-2.5 text-sm text-white placeholder:text-stone-400 disabled:cursor-not-allowed"
-              />
-              <button
-                type="button"
-                disabled
-                aria-label={t("subscribeSoon")}
-                className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#d6ad63] text-stone-950 disabled:cursor-not-allowed"
-              >
-                <ArrowRight aria-hidden="true" className="size-5" />
-              </button>
-            </div>
-            <p className="mt-3 max-w-sm text-xs leading-5 text-stone-400">{t("consent")}</p>
+            <NewsletterForm />
           </div>
 
           <nav aria-label={t("footerNavigation")} className="sm:col-span-2 lg:col-span-1">

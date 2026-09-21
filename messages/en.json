@@ -42,9 +42,8 @@
     "newsletterTitle": "News from our kitchen",
     "newsletterDescription": "Be the first to hear about new dishes and special offers.",
     "emailLabel": "Email address",
-    "emailPlaceholder": "Your email address",
-    "subscribeSoon": "Sign-up coming soon",
-    "consent": "I sign up to receive updates about new dishes.",
+    "emailPlaceholder": "Enter your email address",
+    "consent": "By subscribing, you agree to receive updates about new dishes and important menu changes.",
     "footerNavigation": "Information and legal pages",
     "information": "Information",
     "contact": "Contact us",
@@ -54,6 +53,12 @@
     "instagramSoon": "Instagram profile coming soon",
     "rights": "All rights reserved.",
     "backHome": "Back to home",
-    "placeholderPage": "This page is currently a design preview. Content will be added before launch."
+    "placeholderPage": "This page is currently a design preview. Content will be added before launch.",
+    "subscribe": "Subscribe",
+    "loading": "Subscribing...",
+    "success": "You have subscribed to updates from our menu.",
+    "duplicate": "This email address is already subscribed.",
+    "invalid": "Enter a valid email address.",
+    "error": "Subscription failed. Please try again."
   }
 }

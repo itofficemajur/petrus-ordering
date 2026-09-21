@@ -42,9 +42,8 @@
     "newsletterTitle": "Hírek a konyhánkból",
     "newsletterDescription": "Értesüljön elsőként az új ételekről és különleges ajánlatokról.",
     "emailLabel": "E-mail-cím",
-    "emailPlaceholder": "Az Ön e-mail-címe",
-    "subscribeSoon": "Feliratkozás hamarosan",
-    "consent": "Feliratkozom, hogy értesítést kapjak az új ételekről.",
+    "emailPlaceholder": "Adja meg e-mail-címét",
+    "consent": "A feliratkozással hozzájárul, hogy értesítsük az új ételekről és az étlap fontos változásairól.",
     "footerNavigation": "Információk és jogi oldalak",
     "information": "Információk",
     "contact": "Kapcsolat",
@@ -54,6 +53,12 @@
     "instagramSoon": "Instagram-profil hamarosan",
     "rights": "Minden jog fenntartva.",
     "backHome": "Vissza a kezdőlapra",
-    "placeholderPage": "Ez az oldal jelenleg látványterv. A tartalom a megjelenés előtt kerül ide."
+    "placeholderPage": "Ez az oldal jelenleg látványterv. A tartalom a megjelenés előtt kerül ide.",
+    "subscribe": "Feliratkozom",
+    "loading": "Feliratkozás...",
+    "success": "Sikeresen feliratkozott étlapunk híreire.",
+    "duplicate": "Ez az e-mail-cím már fel van iratkozva.",
+    "invalid": "Adjon meg érvényes e-mail-címet.",
+    "error": "A feliratkozás nem sikerült. Próbálja újra."
   }
 }

@@ -43,8 +43,7 @@
     "newsletterDescription": "Prvi saznajte kada stignu nova jela i posebne ponude.",
     "emailLabel": "Email adresa",
     "emailPlaceholder": "Vaša email adresa",
-    "subscribeSoon": "Prijava uskoro dostupna",
-    "consent": "Prijavljujem se da me obaveštavate o novim jelima.",
+    "consent": "Prijavom pristajete da dobijate obaveštenja o novim jelima i važnim izmenama u jelovniku.",
     "footerNavigation": "Informacije i pravni dokumenti",
     "information": "Informacije",
     "contact": "Kontaktiraj nas",
@@ -54,6 +53,12 @@
     "instagramSoon": "Instagram profil uskoro dostupan",
     "rights": "Sva prava zadržana.",
     "backHome": "Nazad na početnu",
-    "placeholderPage": "Ova stranica je trenutno prikaz za izgled sajta. Sadržaj će biti dodat pre objavljivanja."
+    "placeholderPage": "Ova stranica je trenutno prikaz za izgled sajta. Sadržaj će biti dodat pre objavljivanja.",
+    "subscribe": "Prijavi me",
+    "loading": "Prijavljivanje...",
+    "success": "Uspešno ste se prijavili za novosti iz našeg jelovnika.",
+    "duplicate": "Ova email adresa je već prijavljena.",
+    "invalid": "Unesite ispravnu email adresu.",
+    "error": "Prijava trenutno nije uspela. Pokušajte ponovo."
   }
 }

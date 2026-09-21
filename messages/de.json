@@ -42,9 +42,8 @@
     "newsletterTitle": "Neues aus unserer Küche",
     "newsletterDescription": "Erfahren Sie zuerst von neuen Gerichten und besonderen Angeboten.",
     "emailLabel": "E-Mail-Adresse",
-    "emailPlaceholder": "Ihre E-Mail-Adresse",
-    "subscribeSoon": "Anmeldung bald verfügbar",
-    "consent": "Ich melde mich an, um über neue Gerichte informiert zu werden.",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "consent": "Mit der Anmeldung stimmen Sie zu, Informationen über neue Gerichte und wichtige Änderungen der Speisekarte zu erhalten.",
     "footerNavigation": "Informationen und rechtliche Seiten",
     "information": "Informationen",
     "contact": "Kontaktieren Sie uns",
@@ -54,6 +53,12 @@
     "instagramSoon": "Instagram-Profil bald verfügbar",
     "rights": "Alle Rechte vorbehalten.",
     "backHome": "Zurück zur Startseite",
-    "placeholderPage": "Diese Seite dient derzeit als Designvorschau. Inhalte werden vor der Veröffentlichung ergänzt."
+    "placeholderPage": "Diese Seite dient derzeit als Designvorschau. Inhalte werden vor der Veröffentlichung ergänzt.",
+    "subscribe": "Anmelden",
+    "loading": "Anmeldung läuft...",
+    "success": "Sie haben sich erfolgreich für Neuigkeiten zu unserer Speisekarte angemeldet.",
+    "duplicate": "Diese E-Mail-Adresse ist bereits angemeldet.",
+    "invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+    "error": "Die Anmeldung ist fehlgeschlagen. Bitte versuchen Sie es erneut."
   }
 }
