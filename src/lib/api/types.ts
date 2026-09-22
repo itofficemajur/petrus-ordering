@@ -1,7 +1,11 @@
+import type { AppLocale } from "@/i18n/paths";
+
 export type CategoryDto = {
   id: string;
   title: string;
   slug: string;
+  localizedSlugs: Record<AppLocale, string>;
+  legacySlug: string;
   position: number;
   image: {
     url: string;

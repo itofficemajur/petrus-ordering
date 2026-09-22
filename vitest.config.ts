@@ -8,5 +8,5 @@ export default defineConfig({
       "server-only": fileURLToPath(new URL("./tests/server-only.ts", import.meta.url)),
     },
   },
-  test: { environment: "jsdom", restoreMocks: true },
+  test: { environment: "jsdom", restoreMocks: true, server: { deps: { inline: ["next-intl"] } } },
 });

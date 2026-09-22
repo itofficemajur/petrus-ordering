@@ -60,5 +60,15 @@
     "duplicate": "This email address is already subscribed.",
     "invalid": "Enter a valid email address.",
     "error": "Subscription failed. Please try again."
+  },
+  "Product": {
+    "home": "Home",
+    "allergens": "Allergens",
+    "add": "Add to cart",
+    "added": "Added to cart",
+    "retry": "Try again",
+    "noImage": "Image unavailable",
+    "available": "Available",
+    "cartError": "Unable to save your cart."
   }
 }

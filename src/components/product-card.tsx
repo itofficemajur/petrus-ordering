@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 import type { ProductDto } from "@/lib/api/types";
@@ -38,7 +39,14 @@ export function ProductCard({ product, formatPrice, saleLabel, unavailableLabel 
             )}
           </div>
         )}
-        <h2 className="text-lg font-semibold leading-snug text-stone-900">{product.title}</h2>
+        <h2 className="text-lg font-semibold leading-snug text-stone-900">
+          <Link
+            href={{ pathname: "/products/[slug]", params: { slug: product.slug } }}
+            className="hover:underline focus-visible:outline-2"
+          >
+            {product.title}
+          </Link>
+        </h2>
         {product.description && (
           <p className="text-sm leading-relaxed text-stone-600">{product.description}</p>
         )}

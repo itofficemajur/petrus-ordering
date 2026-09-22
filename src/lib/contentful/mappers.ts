@@ -1,4 +1,6 @@
 import "server-only";
+import { categoryTitleSlug } from "@/lib/category-slug";
+import { localizedPath } from "@/i18n/paths";
 
 import type { CategoryDto, ProductDto, StorefrontResponseDto } from "@/lib/api/types";
 
@@ -50,23 +52,47 @@ export function getLocalizedCategoryTitle(category: ContentfulCategory, locale: 
   return localizedValue(category, locale, CATEGORY_TITLE_FIELDS);
 }
 
+export function getLocalizedCategorySlug(category: ContentfulCategory, locale: AppLocale): string {
+  if (locale === "sr" && category.slug) return category.slug;
+  return (
+    categoryTitleSlug(getLocalizedCategoryTitle(category, locale)) ||
+    category.slug ||
+    category.sys.id
+  );
+}
+
 export function getLocalizedProductTitle(product: ContentfulProduct, locale: AppLocale): string {
-  return localizedValue(product, locale, PRODUCT_TITLE_FIELDS);
+  return (
+    product[localeFieldMap[locale].title]?.trim() ||
+    localizedValue(product, locale, PRODUCT_TITLE_FIELDS)
+  );
 }
 
 export function getLocalizedProductDescription(
   product: ContentfulProduct,
   locale: AppLocale,
 ): string {
-  return localizedValue(product, locale, PRODUCT_DESCRIPTION_FIELDS);
+  const description =
+    product[localeFieldMap[locale].description]?.trim() || product.descriptionSR?.trim();
+  if (description) return description;
+  const title = getLocalizedProductTitle(product, locale);
+  const category = product.category ? getLocalizedCategoryTitle(product.category, locale) : "";
+  const sentences = {
+    sr: `${title} iz kategorije ${category}.`,
+    en: `${title} from our ${category} menu.`,
+    hu: `${title} a(z) ${category} kínálatunkból.`,
+    de: `${title} aus unserer Kategorie ${category}.`,
+    ru: `${title} из раздела «${category}».`,
+  };
+  return category ? sentences[locale] : `${title}.`;
 }
 
-function mapImage(image: ContentfulAsset | null): CategoryDto["image"] {
+export function mapImage(image: ContentfulAsset | null): CategoryDto["image"] {
   if (!image?.url) return null;
 
   let url: URL;
   try {
-    url = new URL(image.url);
+    url = new URL(image.url.startsWith("//") ? `https:${image.url}` : image.url);
   } catch {
     return null;
   }
@@ -91,16 +117,24 @@ function mapCategory(category: ContentfulCategory, locale: AppLocale): CategoryD
   return {
     id: category.sys.id,
     title: getLocalizedCategoryTitle(category, locale),
-    slug: category.slug ?? "",
+    slug: getLocalizedCategorySlug(category, locale),
+    legacySlug: category.slug ?? "",
+    localizedSlugs: {
+      sr: getLocalizedCategorySlug(category, "sr"),
+      en: getLocalizedCategorySlug(category, "en"),
+      hu: getLocalizedCategorySlug(category, "hu"),
+      de: getLocalizedCategorySlug(category, "de"),
+      ru: getLocalizedCategorySlug(category, "ru"),
+    },
     position: category.position ?? Number.MAX_SAFE_INTEGER,
     image: mapImage(category.image),
   };
 }
 
-function mapProduct(product: ContentfulProduct, locale: AppLocale): ProductDto | null {
+export function mapProduct(product: ContentfulProduct, locale: AppLocale): ProductDto | null {
   if (
     !product.sys.id ||
-    !product.slug ||
+    !getLocalizedProductSlug(product, locale) ||
     !product.category?.sys.id ||
     !product.category.slug ||
     typeof product.price !== "number" ||
@@ -117,9 +151,9 @@ function mapProduct(product: ContentfulProduct, locale: AppLocale): ProductDto |
     id: product.sys.id,
     title,
     description: getLocalizedProductDescription(product, locale),
-    slug: product.slug,
+    slug: getLocalizedProductSlug(product, locale),
     categoryId: product.category.sys.id,
-    categorySlug: product.category.slug,
+    categorySlug: getLocalizedCategorySlug(product.category, locale),
     price: product.price,
     compareAtPrice:
       typeof product.compareAtPrice === "number" && Number.isFinite(product.compareAtPrice)
@@ -154,4 +188,19 @@ export function mapStorefrontContent(
       )
       .sort((a, b) => a.position - b.position),
   };
+}
+
+export const localeFieldMap = {
+  sr: { title: "titleSR", description: "descriptionSR", slug: "slugSR" },
+  en: { title: "titleEN", description: "descriptionEN", slug: "slugEN" },
+  hu: { title: "titleHU", description: "descriptionHU", slug: "slugHU" },
+  de: { title: "titleDE", description: "descriptionDE", slug: "slugDE" },
+  ru: { title: "titleRU", description: "descriptionRU", slug: "slugRU" },
+} as const;
+export function getLocalizedProductSlug(product: ContentfulProduct, locale: AppLocale) {
+  return product[localeFieldMap[locale].slug]?.trim() || "";
+}
+export function getProductUrl(product: ContentfulProduct, locale: AppLocale) {
+  const slug = getLocalizedProductSlug(product, locale);
+  return slug ? localizedPath(locale, "/products/[slug]", slug) : null;
 }

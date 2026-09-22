@@ -60,5 +60,15 @@
     "duplicate": "Diese E-Mail-Adresse ist bereits angemeldet.",
     "invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
     "error": "Die Anmeldung ist fehlgeschlagen. Bitte versuchen Sie es erneut."
+  },
+  "Product": {
+    "home": "Startseite",
+    "allergens": "Allergene",
+    "add": "In den Warenkorb",
+    "added": "Zum Warenkorb hinzugefügt",
+    "retry": "Erneut versuchen",
+    "noImage": "Kein Bild verfügbar",
+    "available": "Verfügbar",
+    "cartError": "Warenkorb konnte nicht gespeichert werden."
   }
 }

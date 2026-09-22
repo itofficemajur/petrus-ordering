@@ -60,5 +60,15 @@
     "duplicate": "Ez az e-mail-cím már fel van iratkozva.",
     "invalid": "Adjon meg érvényes e-mail-címet.",
     "error": "A feliratkozás nem sikerült. Próbálja újra."
+  },
+  "Product": {
+    "home": "Kezdőlap",
+    "allergens": "Allergének",
+    "add": "Kosárba",
+    "added": "Kosárba helyezve",
+    "retry": "Próbálja újra",
+    "noImage": "Nincs kép",
+    "available": "Elérhető",
+    "cartError": "A kosár mentése sikertelen."
   }
 }

@@ -17,7 +17,7 @@ export class ContentfulRequestError extends Error {
 
 export async function contentfulGraphQlRequest<T>(
   query: string,
-  options: { revalidate?: number; tags?: string[] } = {},
+  options: { revalidate?: number; tags?: string[]; variables?: Record<string, unknown> } = {},
 ): Promise<T> {
   const spaceId = process.env.CONTENTFUL_SPACE_ID;
   const environmentId = process.env.CONTENTFUL_ENVIRONMENT_ID;
@@ -37,7 +37,7 @@ export async function contentfulGraphQlRequest<T>(
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ query, variables: options.variables }),
       next: {
         revalidate: options.revalidate ?? 600,
         tags: options.tags ?? ["contentful-storefront"],

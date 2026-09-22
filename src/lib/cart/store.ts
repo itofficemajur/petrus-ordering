@@ -61,8 +61,9 @@ function writeCart(items: CartItem[]) {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     window.dispatchEvent(new Event(CART_CHANGE_EVENT));
+    return true;
   } catch {
-    // The cart remains empty if browser storage is unavailable.
+    return false;
   }
 }
 
@@ -78,7 +79,7 @@ export function addToCart(productId: string, quantity = 1) {
     items.push({ productId, quantity });
   }
 
-  writeCart(items);
+  return writeCart(items);
 }
 
 export function removeFromCart(productId: string) {

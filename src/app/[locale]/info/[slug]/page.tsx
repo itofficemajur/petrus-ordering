@@ -1,3 +1,6 @@
+import { hasLocale } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { staticPageAlternates } from "@/i18n/metadata";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -7,7 +10,7 @@ import { Link } from "@/i18n/navigation";
 const slugs = ["privacy", "cookies", "terms", "contact"] as const;
 type InfoSlug = (typeof slugs)[number];
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = { params: Promise<{ locale: string; slug: string }> };
 
 function isInfoSlug(slug: string): slug is InfoSlug {
   return slugs.some((item) => item === slug);
@@ -18,11 +21,16 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  if (!isInfoSlug(slug)) notFound();
+  const { locale, slug } = await params;
+  if (!isInfoSlug(slug) || !hasLocale(routing.locales, locale)) notFound();
   const t = await getTranslations("Footer");
 
-  return { title: t(slug), robots: { index: false, follow: false } };
+  return {
+    title: t(slug),
+    alternates: staticPageAlternates(locale, `/info/${slug}`),
+    openGraph: { url: staticPageAlternates(locale, `/info/${slug}`).canonical },
+    robots: { index: false, follow: false },
+  };
 }
 
 export default async function InfoPage({ params }: Props) {

@@ -1,3 +1,4 @@
+import { localizedPath } from "@/i18n/paths";
 import type { MetadataRoute } from "next";
 
 import { isIndexable, siteUrl } from "@/config/site";
@@ -12,7 +13,8 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [
         "/api",
-        ...["admin", "checkout"].flatMap((path) => [
+        ...routing.locales.map((locale) => localizedPath(locale, "/checkout")),
+        ...["admin", "checkout", "cart", "account"].flatMap((path) => [
           `/${path}`,
           ...routing.locales.map((locale) => `/${locale}/${path}`),
         ]),

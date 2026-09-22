@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 
+import { readCategoryQuery, setCategoryQuery } from "@/i18n/category-query";
 import { fetchStorefront } from "@/lib/api/storefront";
 import type { CategoryDto, StorefrontResponseDto } from "@/lib/api/types";
 
@@ -35,20 +36,22 @@ function subscribeToCategoryChange(callback: () => void) {
 }
 
 function getCategoryFromUrl() {
-  return new URLSearchParams(window.location.search).get("category");
+  return window.location.search;
 }
 
 function getServerCategory() {
-  return null;
+  return "";
 }
 
 export function StorefrontProvider({ locale, children }: { locale: string; children: ReactNode }) {
   const [state, setState] = useState<StorefrontState>({ status: "loading" });
-  const requestedSlug = useSyncExternalStore(
+  const search = useSyncExternalStore(
     subscribeToCategoryChange,
     getCategoryFromUrl,
     getServerCategory,
   );
+
+  const requestedSlug = readCategoryQuery(new URLSearchParams(search), locale);
 
   useEffect(() => {
     let current = true;
@@ -69,24 +72,30 @@ export function StorefrontProvider({ locale, children }: { locale: string; child
   const selectedCategory =
     state.status === "success"
       ? (state.data.categories.find((category) => category.slug === requestedSlug) ??
+        state.data.categories.find(
+          (category) =>
+            category.legacySlug === requestedSlug ||
+            Object.values(category.localizedSlugs).includes(requestedSlug ?? ""),
+        ) ??
         state.data.categories[0] ??
         null)
       : null;
 
   useEffect(() => {
-    if (!selectedCategory || requestedSlug === selectedCategory.slug) return;
+    if (!selectedCategory) return;
 
     const url = new URL(window.location.href);
-    url.searchParams.set("category", selectedCategory.slug);
+    setCategoryQuery(url.searchParams, locale, selectedCategory.slug);
+    if (url.search === window.location.search) return;
     window.history.replaceState(null, "", url);
     window.dispatchEvent(new Event(CATEGORY_CHANGE_EVENT));
-  }, [requestedSlug, selectedCategory]);
+  }, [search, locale, selectedCategory]);
 
   function selectCategory(category: CategoryDto) {
     if (category.slug === selectedCategory?.slug) return;
 
     const url = new URL(window.location.href);
-    url.searchParams.set("category", category.slug);
+    setCategoryQuery(url.searchParams, locale, category.slug);
     window.history.pushState(null, "", url);
     window.dispatchEvent(new Event(CATEGORY_CHANGE_EVENT));
   }
@@ -109,4 +118,8 @@ export function useStorefront() {
   const context = useContext(StorefrontContext);
   if (!context) throw new Error("StorefrontProvider is missing");
   return context;
+}
+
+export function useOptionalStorefront() {
+  return useContext(StorefrontContext);
 }

@@ -1,10 +1,19 @@
+import { getLocale } from "next-intl/server";
+import { hasLocale } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+import { staticPageAlternates } from "@/i18n/metadata";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Cart");
 
+  const locale = await getLocale();
+  if (!hasLocale(routing.locales, locale)) notFound();
   return {
+    alternates: staticPageAlternates(locale, "/checkout"),
+    openGraph: { url: staticPageAlternates(locale, "/checkout").canonical },
     title: t("comingSoon"),
     robots: { index: false, follow: false },
   };

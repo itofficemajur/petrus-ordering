@@ -60,5 +60,15 @@
     "duplicate": "Ova email adresa je već prijavljena.",
     "invalid": "Unesite ispravnu email adresu.",
     "error": "Prijava trenutno nije uspela. Pokušajte ponovo."
+  },
+  "Product": {
+    "home": "Početna",
+    "allergens": "Alergeni",
+    "add": "Dodaj u korpu",
+    "added": "Dodato u korpu",
+    "retry": "Pokušaj ponovo",
+    "noImage": "Slika nije dostupna",
+    "available": "Dostupno",
+    "cartError": "Nije moguće sačuvati korpu."
   }
 }
